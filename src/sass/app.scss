@@ -1,0 +1,7 @@
+.app {
+    background: $white;
+    padding: 2rem;
+    @media (min-width: $min-desktop) {
+        margin: 0 auto;
+    }
+}
