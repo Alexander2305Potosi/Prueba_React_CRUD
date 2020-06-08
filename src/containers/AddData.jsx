@@ -34,8 +34,8 @@ const AddData = ({ addItem, close }) => {
 	const handleChange = (e) => {
 		let regex = /^[0-9.,]+$/;
 		if (e.target.value === '' || regex.test(e.target.value)) {
-			let formatNumber = e.target.value.toString().replaceAll('.', '');
-			let numParts = formatNumber.toString().split(",");
+			let formatNumber = e.target.value.split('.').join('')
+			let numParts = formatNumber.split(",");
 			numParts[0] = numParts[0].replace(/\B(?=(\d{3})+(?!\d))/g, ".");
 			let value = numParts.join(",");
 			setState({ ...state, [e.target.name]: value });
